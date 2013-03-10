@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Syntax: build <Optional Fancy Name Here>
+# This simplifies the whole build setup process.
+source ../build/envsetup.sh
+breakfast cm_d710-userdebug
+if [ $# -ne 0 ]
+then
+	export CM_BUILDTYPE="EXPERIMENTAL"
+	export CM_EXTRAVERSION=$1
+fi
+mka bacon

@@ -10,4 +10,5 @@ then
 	export CM_BUILDTYPE="EXPERIMENTAL"
 	export CM_EXTRAVERSION=$1
 fi
-mka bacon >&build-log.`date +%FT%T`
+LOG_FILE=build-log.`date +%FT%T`
+( time mka bacon >&$LOG_FILE ) 2>>$LOG_FILE

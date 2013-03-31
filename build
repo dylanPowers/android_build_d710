@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Syntax: build <Optional Fancy Name Here>
-# This simplifies the whole build setup process. It would probably most helpful
-# run this in a screen.
+# This simplifies the whole build setup process. It would probably be most 
+# helpful to run this in screen (hence the screen-build command).
 . build/envsetup.sh
 breakfast cm_d710-userdebug
 if [ $# -ne 0 ]
@@ -11,3 +11,4 @@ then
 	export CM_EXTRAVERSION=$1
 fi
 mka bacon >&build-log.`date +%FT%T`
+

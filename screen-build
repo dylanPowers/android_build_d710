@@ -1,0 +1,4 @@
+#!/bin/bash
+
+screen build-d710/build $1
+

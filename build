@@ -12,5 +12,5 @@ then
 fi
 
 LOG_FILE=build-log.`date +%FT%T`
-( time mka bacon >&$LOG_FILE ) 2>>$LOG_FILE
+( time mka bacon -j8 >&$LOG_FILE ) 2>>$LOG_FILE
 
